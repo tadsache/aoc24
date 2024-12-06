@@ -13,3 +13,11 @@ func ReadLines(fname string) []string {
 	// TODO: Remove empty lines
 	return strings.Split(string(fData), "\n")
 }
+
+func Read(fname string) string {
+	fData, err := os.ReadFile(fname)
+	if err != nil {
+		panic(err)
+	}
+	return string(fData)
+}
